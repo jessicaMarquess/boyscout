@@ -13,10 +13,10 @@ export default function Home() {
         Olá!
       </h1>
       <div className='flex flex-col items-center justify-center mt-2 gap-3'>
-        <p className="text-white ">
+        <p className="text-white">
           Aqui você vai encontrar uma série de perguntas que eu mesma vou analisar. Mas não se preocupe! Se você chegou até aqui, é porque já tem potencial para um encontro comigo. Yay! Que felicidade.
         </p>
-        <Image src={happyGif} alt='garota comemorando' className='size-fit' />
+        <Image src={happyGif} alt='garota comemorando' className='size-fit' loading='lazy' />
         <Button variant="ghost" className='flex items-center text-xl mt-4' onClick={() => route.push('/form-page')}>
           Vamos começar?! <ArrowUpRight className='size-12' />
         </Button>
