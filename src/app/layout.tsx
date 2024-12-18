@@ -14,7 +14,8 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "Are You The Match?",
-  description: "Serious fun ahead: Complete this form to show you're aligned with what I want."
+  description: "Serious fun ahead: Complete this form to show you're aligned with what I want.",
+  robots: "noindex"
 };
 
 export default function RootLayout({
