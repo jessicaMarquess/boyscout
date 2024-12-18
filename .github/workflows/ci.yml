@@ -1,5 +1,7 @@
 name: CI
+
 on: [push]
+
 jobs:
   lighthouseci:
     runs-on: ubuntu-latest
@@ -10,4 +12,5 @@ jobs:
           node-version: 18
       - run: npm install && npm install -g @lhci/cli@0.14.x
       - run: npm run build
-      - run: lhci autorun
+      - run: npx next export
+      - run: lhci autorun --collect.staticDistDir=./out
