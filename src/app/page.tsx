@@ -13,7 +13,7 @@ export default function Home() {
         Olá!
       </h1>
       <div className='flex flex-col items-center justify-center mt-2 gap-3'>
-        <p className="text-white">
+        <p className="text-white ">
           Aqui você vai encontrar uma série de perguntas que eu mesma vou analisar. Mas não se preocupe! Se você chegou até aqui, é porque já tem potencial para um encontro comigo. Yay! Que felicidade.
         </p>
         <Image src={happyGif} alt='garota comemorando' className='size-fit' />
