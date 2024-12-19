@@ -26,9 +26,9 @@ export default function Home() {
         <p className="text-white">
           Aqui você vai encontrar uma série de perguntas que eu mesma vou analisar. Mas não se preocupe! Se você chegou até aqui, é porque já tem potencial para um encontro comigo. Yay! Que felicidade.
         </p>
-        <Image src={happyGif} alt='garota comemorando' className='size-fit' priority />
-        <Button variant="link" className='flex items-center text-xl mt-4 text-pink-600' onClick={() => route.push('/form-page')}>
-          Vamos começar?! <ArrowUpRight className='size-12' />
+        <Image src={happyGif} alt='garota comemorando' className='size-[50%]' priority />
+        <Button variant="default" className='flex items-center text-xl mt-4 text-white bg-pink-600 hover:bg-pink-500' onClick={() => route.push('/form-page')}>
+          Começar
         </Button>
       </div>
     </div>

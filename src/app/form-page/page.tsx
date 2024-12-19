@@ -113,30 +113,9 @@ export default function FormPage() {
       });
 
       if (response.ok) {
-        toast({
-          title: "Obrigada, recebi aqui o e-mail 🚀",
-          action: (
-            <ToastAction
-              onClick={() => {
-                window.open(
-                  "https://open.spotify.com/playlist/6RH04MMkLFSC34ILFiIB6H?si=93b7e83789284c6c",
-                  "_blank"
-                );
-              }}
-              altText="Redirecionamento para uma playlist"
-            >
-              Que tal uma playlist?
-            </ToastAction>
-          ),
-          className: "bg-pink-600 hover:bg-pink-500 text-white",
-          duration: 5000,
-        });
+        router.push("final-page");
 
         form.reset();
-
-        setTimeout(() => {
-          router.push("/");
-        }, 5000);
       } else {
         const error = await response.json();
         throw new Error(error.message || "Erro ao enviar o email.");
@@ -186,7 +165,7 @@ export default function FormPage() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="max-w-[500px] lg:w-[700px] flex flex-col gap-4 p-4 mt-4"
+          className="max-w-[500px] lg:max-w-screen-lg lg:w-[1000px] flex flex-col gap-4 p-4 mt-4"
         >
           {questions.map(
             (question, index) =>
@@ -197,7 +176,7 @@ export default function FormPage() {
                   name={question.value as keyof z.infer<typeof formSchema>}
                   render={({ field }) => (
                     <FormItem className="flex flex-col gap-2">
-                      <FormLabel className="text-lg font-mono text-pink-600">
+                      <FormLabel className="text-lg lg:text-xl font-mono text-pink-600">
                         {question.label}
                       </FormLabel>
                       <FormControl>
