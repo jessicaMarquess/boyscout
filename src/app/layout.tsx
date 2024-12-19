@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto_Serif, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster"
 
 const robotoSerif = Roboto_Serif({
   variable: "--font-geist-sans",
@@ -23,12 +24,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="pt-BR">
       <body
-        className={`${robotoSerif.variable} ${robotoMono.variable} antialiased bg-slate-800`}
+        className={`${robotoSerif.variable} ${robotoMono.variable} antialiased bg-black`}
       >
         {children}
+        <Toaster />
       </body>
     </html>
   );
