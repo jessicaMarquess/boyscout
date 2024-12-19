@@ -108,17 +108,18 @@ export default function FormPage() {
           title: "Obrigada, recebi aqui o e-mail 🚀",
           action: (
             <ToastAction
-              onClick={() =>
-                router.push(
-                  "https://open.spotify.com/playlist/5qcL3PRQXiAirpQcAtpjWf?si=5ec2ad4bcf214443"
-                )
-              }
+              onClick={() => {
+                window.open(
+                  "https://open.spotify.com/playlist/5qcL3PRQXiAirpQcAtpjWf?si=5ec2ad4bcf214443",
+                  "_blank"
+                );
+              }}
               altText="Redirecionamento para uma playlist"
             >
               Que tal uma playlist?
             </ToastAction>
           ),
-          className: "bg-green-500",
+          className: "bg-pink-600 hover:bg-pink-500",
         });
 
         form.reset();
@@ -220,7 +221,7 @@ export default function FormPage() {
               </Button>
             ) : (
               <Button
-                className="bg-green-600 hover:bg-green-500"
+                className="bg-pink-600 hover:bg-pink-500"
                 disabled={isNextDisabled || isLoading}
                 type="submit"
               >
