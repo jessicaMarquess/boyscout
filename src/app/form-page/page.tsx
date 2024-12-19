@@ -37,6 +37,9 @@ const formSchema = z.object({
   answerFive: z.string().min(5, {
     message: "não seja preguiçoso, escreva mais aí",
   }),
+  answerSix: z.string().min(5, {
+    message: "não seja preguiçoso, escreva mais aí",
+  }),
 });
 
 const questions = [
@@ -70,6 +73,11 @@ const questions = [
     label: "Se você estivesse preso em uma ilha deserta com apenas 3 itens, o que escolheria e por quê?",
     placeholder: "Caraca, alguém me contrata como recrutadora.",
   },
+  {
+    value: "answerSix",
+    label: "Se você tivesse que escolher uma música para tocar no seu funeral, qual seria?",
+    placeholder: "Estou vendo muitas perguntas relacionadas com morte, preocupante?",
+  },
 ];
 
 export default function FormPage() {
@@ -89,6 +97,7 @@ export default function FormPage() {
       answerThree: "",
       answerFour: "",
       answerFive: "",
+      answerSix: ""
     },
   });
 
