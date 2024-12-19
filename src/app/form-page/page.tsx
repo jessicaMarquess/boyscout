@@ -120,6 +120,9 @@ export default function FormPage() {
           ),
           className: "bg-green-500",
         });
+
+        form.reset();
+        router.push("/");
       } else {
         const error = await response.json();
         throw new Error(error.message || "Erro ao enviar o email.");
