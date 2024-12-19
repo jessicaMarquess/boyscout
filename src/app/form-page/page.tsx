@@ -110,7 +110,7 @@ export default function FormPage() {
             <ToastAction
               onClick={() => {
                 window.open(
-                  "https://open.spotify.com/playlist/1Kg9dxddEBeBmLI3AYzQe5?si=8fa9a100e29f4a7b",
+                  "https://open.spotify.com/playlist/6RH04MMkLFSC34ILFiIB6H?si=93b7e83789284c6c",
                   "_blank"
                 );
               }}
