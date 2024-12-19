@@ -128,11 +128,15 @@ export default function FormPage() {
               Que tal uma playlist?
             </ToastAction>
           ),
-          className: "bg-pink-600 hover:bg-pink-500",
+          className: "bg-pink-600 hover:bg-pink-500 text-white",
+          duration: 5000,
         });
 
         form.reset();
-        router.push("/");
+
+        setTimeout(() => {
+          router.push("/");
+        }, 5000);
       } else {
         const error = await response.json();
         throw new Error(error.message || "Erro ao enviar o email.");
