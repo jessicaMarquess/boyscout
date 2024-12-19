@@ -4,8 +4,15 @@ sgMail.setApiKey(process.env.SENDGRID_KEY as string);
 
 export async function POST(req: Request) {
   try {
-    const { nome, answerOne, answerTwo, answerThree, answerFour, answerFive } =
-      await req.json();
+    const {
+      nome,
+      answerOne,
+      answerTwo,
+      answerThree,
+      answerFour,
+      answerFive,
+      answerSix,
+    } = await req.json();
 
     const fromEmail = process.env.SENDGRID_EMAIL as string;
     const toEmail = process.env.SENDGRID_EMAIL as string;
@@ -22,6 +29,7 @@ export async function POST(req: Request) {
         <p><strong>Se você tivesse que escolher um novo transporte para ir ao trabalho, qual seria?</strong> ${answerThree}</p>
         <p><strong>Se você fosse convidado para um jantar com extraterrestres, o que levaria?</strong> ${answerFour}</p>
         <p><strong>Se você estivesse preso em uma ilha deserta com apenas 3 itens, o que escolheria e por quê?</strong> ${answerFive}</p>
+        <p><strong>A pergunta da musga</strong> ${answerSix}</p>
       `,
     };
 
