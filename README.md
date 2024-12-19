@@ -38,6 +38,6 @@ npm i
 npm run dev
 ```
 
-## Também é necessário configurar as suas chaves do sendgrid para receber o e-mail. Utilize o `.env.example` como base.
+Também é necessário configurar as suas chaves do sendgrid para receber o e-mail. Utilize o `.env.example` como base.
 
 ### Espero que se divirta, feito por mim: [Jessica](https://github.com/jessicaMarquess) 🖤
