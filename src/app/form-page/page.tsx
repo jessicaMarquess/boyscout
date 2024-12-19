@@ -168,11 +168,11 @@ export default function FormPage() {
   }
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center">
+    <div className="w-full lg:h-screen flex flex-col mt-20 lg:mt-0 items-center justify-center">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="lg:w-[700px] flex flex-col gap-4 p-4 mt-4"
+          className="max-w-[500px] lg:w-[700px] flex flex-col gap-4 p-4 mt-4"
         >
           {questions.map(
             (question, index) =>
@@ -199,7 +199,7 @@ export default function FormPage() {
                 />
               )
           )}
-          <div className="flex flex-col gap-3 lg:flex-row lg:justify-between">
+          <div className="mt-2 flex flex-col-reverse gap-3 lg:flex-row lg:justify-between">
             <Button
               type="button"
               onClick={handlePrevious}
