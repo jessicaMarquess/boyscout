@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import happyGif from '../../public/happy.gif'
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 

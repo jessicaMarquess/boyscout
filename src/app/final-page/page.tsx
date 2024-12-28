@@ -1,8 +1,5 @@
 'use client'
-import Image from 'next/image';
-import happyGif from '../../public/happy.gif'
 import { Button } from '@/components/ui/button';
-import { ArrowUpRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
@@ -38,7 +35,7 @@ export default function Home() {
       <div className='flex flex-col items-center justify-center mt-2 gap-3'>
 
         <Button variant="link" className='hidden lg:flex items-center text-xl mt-4 text-pink-600' onClick={() => route.push('/')}>
-          Voltar ao início <ArrowUpRight className='size-12' />
+          Voltar ao início
         </Button>
       </div>
     </div>
